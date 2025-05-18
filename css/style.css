@@ -190,6 +190,108 @@
     }
 }
 
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        overflow: visible;
+    }
+
+    .logo-img{
+        width: 40%;
+        height: 50%;
+        object-fit: cover;
+}
+}
+
+@media (max-width: 375px) {
+  /* Adjust logo size */
+  .logo-img {
+    max-width: 100px;
+    height: 100px;
+  }
+
+  /* Adjust navbar padding */
+  .navbar {
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Ensure nav links stack and have space */
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+    font-size: 14px;
+  }
+
+  /* Adjust button size */
+  .btn-outline-primary {
+    padding: 0.4rem 0.75rem;
+    font-size: 14px;
+  }
+
+  .btn-sm-square {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  /* Collapse menu alignment */
+  .navbar-collapse {
+    background-color: #000; /* or match your theme */
+  }
+}
+
+
+.logo-img{
+        width: 30%;
+        height: 30%;
+        object-fit: cover;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: none; /* Hide top bar if needed */
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-link {
+        margin-right: 0;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .carousel-caption h1,
+    .carousel-caption p {
+        font-size: 1.2rem; /* Smaller text for smaller screens */
+    }
+
+    .carousel-caption {
+        padding: 0 15px;
+        flex-direction: column;
+    }
+
+    .carousel-Gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 .about-header {
     padding-top: 12rem;
     padding-bottom: 6rem;
@@ -497,5 +599,16 @@
 
  .donate-header .breadcrumb-item+.breadcrumb-item::before {
     color: #999999;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    display: block;
+    width: 120px; /* change as needed */
+    height: auto;
 }
 
