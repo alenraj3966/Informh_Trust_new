@@ -186,15 +186,122 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
     }
 }
+
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        overflow: visible;
+    }
+
+    .logo-img{
+        width: 40%;
+        height: 50%;
+        object-fit: cover;
+}
+}
+
+@media (max-width: 375px) {
+  /* Adjust logo size */
+  .logo-img {
+    max-width: 100px;
+    height: 100px;
+  }
+
+  /* Adjust navbar padding */
+  .navbar {
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Ensure nav links stack and have space */
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+    font-size: 14px;
+  }
+
+  /* Adjust button size */
+  .btn.btn-outline-primary {
+    padding: 0.4rem 0.75rem;
+    font-size: 14px;
+  }
+
+  .btn-sm-square {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  /* Collapse menu alignment */
+  .navbar-collapse {
+    background-color: #000; /* or match your theme */
+  }
+}
+
+
+.logo-img{
+        width: 30%;
+        height: 30%;
+        object-fit: cover;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: none; /* Hide top bar if needed */
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-link {
+        margin-right: 0;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+     .btn.btn-outline-primary {
+    padding: 0.4rem 0.75rem;
+    font-size: 14px;
+  }
+
+    .carousel-caption h1,
+    .carousel-caption p {
+        font-size: 1.2rem; /* Smaller text for smaller screens */
+    }
+
+    .carousel-caption {
+        padding: 0 15px;
+        flex-direction: column;
+    }
+
+    .carousel-Gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 .about-header {
     padding-top: 12rem;
     padding-bottom: 6rem;
     background: linear-gradient(rgba(0, 29, 35, .8), rgba(0, 29, 35, .8)), url(../img/Aboutasi.jpg) center center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -205,7 +312,7 @@
     padding-top: 15rem;
     padding-bottom: 8rem;
     background: linear-gradient(rgba(0, 29, 35, .8), rgba(0, 29, 35, .8)), url(../img/ourvision.jpg) center center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -216,7 +323,7 @@
     padding-top: 15rem;
     padding-bottom: 8rem;
     background: linear-gradient(rgba(0, 29, 35, .8), rgba(0, 29, 35, .8)), url(../img/contact_us.jpg) center center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -498,4 +605,126 @@
  .donate-header .breadcrumb-item+.breadcrumb-item::before {
     color: #999999;
 }
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    display: block;
+    width: 120px; /* change as needed */
+    height: auto;
+}
+
+/* FQA */
+
+.e-n-accordion {
+  max-width: 700px;
+  margin: auto;
+}
+
+.e-n-accordion-item {
+  border: 1px solid #FF6F0F;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.e-n-accordion-item summary {
+  cursor: pointer;
+  padding: 15px;
+  /* background-color: #f1f1f1; */
+  background-color: #FFF0E6 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+}
+
+.e-n-accordion-item-title-text {
+  font-weight: bold;
+}
+
+.e-n-accordion-content {
+  padding: 15px;
+}
+
+.e-n-accordion-item-title-icon i {
+  font-size: 1.2em;
+}
+
+details[open] .e-opened {
+  display: inline;
+}
+
+details[open] .e-closed {
+  display: none;
+}
+
+details:not([open]) .e-opened {
+  display: none;
+}
+
+details:not([open]) .e-closed {
+  display: inline;
+}
+
+.img-about{
+    max-width: 100px;
+    height: auto;
+}
+
+/*  */
+
+.custom-amount-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.custom-amount-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #FF6F0F;
+  color: #fff;
+  font-size: 22px;
+  border: 2px solid #FF6F0F;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+.custom-pound-icon {
+  margin-right: 0.5rem;
+  font-style: normal;
+}
+
+.custom-amount-input {
+  border: none;
+  background-color: #FF6F0F;
+  color: #fff;
+  font-size: 22px;
+  outline: none;
+  width: 400px;
+  padding: 0.3rem;
+}
+
+.custom-amount-input::placeholder {
+  color: #e0e0e0;
+}
+
+.custom-cancel-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.custom-cancel-icon {
+  color: #fff;
+}
+
+
 
