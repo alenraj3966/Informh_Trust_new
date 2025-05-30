@@ -32,6 +32,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
@@ -206,6 +208,7 @@ Yes! I want to be a Guardian of Hope and pledge my support to help the helpless 
                                         <label class="btn btn-light py-3" for="btnradio4">other</label>
                                     </div>
                                 </div>
+                                 <div class="col-12 col-lg-6 col-md-6">
                                 <div class="custom-amount-container">
                                     <div class="custom-amount-wrapper">
                                         <i class="custom-pound-icon">£</i>
@@ -216,6 +219,7 @@ Yes! I want to be a Guardian of Hope and pledge my support to help the helpless 
                                             <i class="fa fa-times-circle fa-2x custom-cancel-icon"></i>
                                         </button>
                                     </div>
+                                </div>
                                 </div>
 
                                 <div class="col-12">
@@ -232,7 +236,7 @@ Yes! I want to be a Guardian of Hope and pledge my support to help the helpless 
                     </div>
                 </div>
 
-                <div class="e-n-accordion col-lg-6 wow fadeIn"
+                <div class="e-n-accordion col-lg-6 wow fadeIn mt-3"
                     aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <!-- <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div> -->
@@ -463,6 +467,36 @@ allRadios.forEach(radio => {
     // Optionally select another radio, e.g., the first one
     document.getElementById('btnradio4').checked = true;
   });
+</script>
+
+
+
+<script>
+  var options = {
+    "key": "rzp_test_YourTestKeyHere", // Replace with your test key from Razorpay Dashboard
+    "amount": "50000", // Amount is in paise = 50000 paise = ₹500
+    "currency": "INR",
+    "name": "My Company",
+    "description": "Test Transaction",
+    // No `order_id` here since we're skipping backend
+    "handler": function (response){
+      alert("Payment ID: " + response.razorpay_payment_id);
+    },
+    "prefill": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "contact": "9999999999"
+    },
+    "theme": {
+      "color": "#3399cc"
+    }
+  };
+
+  var rzp1 = new Razorpay(options);
+  document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+  }
 </script>
 </body>
 
